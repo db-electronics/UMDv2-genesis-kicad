@@ -5,10 +5,10 @@ $Descr USLetter 11000 8500
 encoding utf-8
 Sheet 1 1
 Title "Sega Genesis UMDv2 Cartridge Adapter"
-Date "2020-02-10"
-Rev "2.0"
+Date "2020-02-12"
+Rev "2.1"
 Comp "db Electronics"
-Comment1 "https://github.com/db-electronics/UMDv2-kicad"
+Comment1 "https://github.com/db-electronics/UMDv2-genesis-kicad"
 Comment2 "Licensed under CERN OHL v.1.2"
 Comment3 "Copyright René Richard 2020"
 Comment4 ""
@@ -718,14 +718,7 @@ Connection ~ 3250 6900
 Wire Wire Line
 	3250 6900 3250 7250
 Wire Wire Line
-	4450 6900 4600 6900
-Wire Wire Line
-	4600 6900 4600 7250
-Wire Wire Line
 	4450 6800 4600 6800
-Wire Wire Line
-	4600 6800 4600 6900
-Connection ~ 4600 6900
 Wire Wire Line
 	4450 6700 4600 6700
 Wire Wire Line
@@ -791,7 +784,7 @@ Wire Wire Line
 Text Label 2950 2050 0    50   ~ 0
 SCL
 Text Notes 4800 6400 0    50   ~ 0
-Genesis ID = 0x00
+Genesis ID = 0x01
 Wire Wire Line
 	2900 2950 3450 2950
 Text Label 2950 2950 0    50   ~ 0
@@ -1281,4 +1274,21 @@ Text Label 3650 2250 0    50   ~ 0
 ~WR~
 Text Notes 3650 1550 0    50   ~ 0
 Under normal circumstances populate R101,\nPopulate R102 to support legacy Bitmap Bureau PCB
+$Comp
+L power:+3.3V #PWR0104
+U 1 1 5E44F1F9
+P 4700 6100
+F 0 "#PWR0104" H 4700 5950 50  0001 C CNN
+F 1 "+3.3V" H 4715 6273 50  0000 C CNN
+F 2 "" H 4700 6100 50  0001 C CNN
+F 3 "" H 4700 6100 50  0001 C CNN
+	1    4700 6100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4600 6800 4600 7250
+Wire Wire Line
+	4700 6100 4700 6900
+Wire Wire Line
+	4700 6900 4450 6900
 $EndSCHEMATC
