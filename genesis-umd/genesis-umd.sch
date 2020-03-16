@@ -5,8 +5,8 @@ $Descr USLetter 11000 8500
 encoding utf-8
 Sheet 1 1
 Title "Sega Genesis UMDv2 Cartridge Adapter"
-Date "2020-02-12"
-Rev "2.1"
+Date "2020-03-09"
+Rev "2.2"
 Comp "db Electronics"
 Comment1 "https://github.com/db-electronics/UMDv2-genesis-kicad"
 Comment2 "Licensed under CERN OHL v.1.2"
@@ -20,7 +20,7 @@ P 2700 5150
 F 0 "CON101" H 2845 8617 50  0000 C CNN
 F 1 "UMDv2-CONN" H 2845 8526 50  0000 C CNN
 F 2 "db-thparts:UMD-CONN-DIP64" H 3400 9000 60  0001 C CNN
-F 3 "http://suddendocs.samtec.com/prints/ssw-1xx-xx-xxx-x-xx-xxx-xx-mkt.pdf" H 4550 8800 60  0001 C CNN
+F 3 "https://media.digikey.com/pdf/Data%20Sheets/3M%20PDFs/961_2.54mm_StraightSolderTail_DS.pdf" H 4550 8800 60  0001 C CNN
 F 4 "SAM1211-32-ND" H 3150 8700 60  0001 C CNN "Digikey"
 F 5 "CONN RCPT 32POS 0.1 GOLD PCB" H 3500 8900 60  0001 C CNN "Description"
 	1    2700 5150
@@ -33,9 +33,9 @@ P 8450 5150
 F 0 "CON101" H 8450 8600 50  0000 L CNN
 F 1 "UMDv2-CONN" H 8450 8500 50  0000 L CNN
 F 2 "db-thparts:UMD-CONN-DIP64" H 9150 9000 60  0001 C CNN
-F 3 "http://suddendocs.samtec.com/prints/ssw-1xx-xx-xxx-x-xx-xxx-xx-mkt.pdf" H 10300 8800 60  0001 C CNN
-F 4 "SAM1211-32-ND" H 8900 8700 60  0001 C CNN "Digikey"
-F 5 "CONN RCPT 32POS 0.1 GOLD PCB" H 9250 8900 60  0001 C CNN "Description"
+F 3 "https://media.digikey.com/pdf/Data%20Sheets/3M%20PDFs/961_2.54mm_StraightSolderTail_DS.pdf" H 10300 8800 60  0001 C CNN
+F 4 "3M155862-32-ND" H 8900 8700 60  0001 C CNN "Digikey"
+F 5 "CONN HEADER VERT 32POS 2.54MM" H 9250 8900 60  0001 C CNN "Description"
 	2    8450 5150
 	1    0    0    -1  
 $EndComp
@@ -706,13 +706,6 @@ Wire Wire Line
 	3400 6700 3250 6700
 Connection ~ 3250 6700
 Wire Wire Line
-	3250 6700 3250 6800
-Wire Wire Line
-	3400 6800 3250 6800
-Connection ~ 3250 6800
-Wire Wire Line
-	3250 6800 3250 6900
-Wire Wire Line
 	3400 6900 3250 6900
 Connection ~ 3250 6900
 Wire Wire Line
@@ -1291,4 +1284,19 @@ Wire Wire Line
 	4700 6100 4700 6900
 Wire Wire Line
 	4700 6900 4450 6900
+Wire Wire Line
+	3250 6700 3250 6900
+$Comp
+L power:+3.3V #PWR?
+U 1 1 5E68017F
+P 3000 6800
+F 0 "#PWR?" H 3000 6650 50  0001 C CNN
+F 1 "+3.3V" H 3015 6973 50  0000 C CNN
+F 2 "" H 3000 6800 50  0001 C CNN
+F 3 "" H 3000 6800 50  0001 C CNN
+	1    3000 6800
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	3000 6800 3400 6800
 $EndSCHEMATC
